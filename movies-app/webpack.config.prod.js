@@ -58,10 +58,4 @@ module.exports = {
     maxEntrypointSize: 512000,
     maxAssetSize: 512000
   },
-  devServer: {
-    static: path.join(__dirname, "build"),
-    compress: true,
-    port: 8000,
-    open: true,
-  },
 };
