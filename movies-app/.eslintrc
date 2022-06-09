@@ -1,9 +1,35 @@
 {
     "parser": "@babel/eslint-parser",
     "parserOptions": {
-        "requireConfigFile": false
+        "requireConfigFile": false,
+        "babelOptions": {
+            "parserOpts": {
+                "plugins": [
+                    "jsx"
+                ]
+            }
+        }
     },
     "extends": [
         "airbnb"
-    ]
+    ],
+    "ignorePatterns": [
+        "*.config.js",
+        "*.config.*.js",
+        "/build",
+        "/dev"
+    ],
+    "env": {
+        "browser": true
+    },
+    "rules": {
+        "react/destructuring-assignment": "off",
+        "react/state-in-constructor": "off",
+        "import/prefer-default-export": "off",
+        "quotes": [
+            2,
+            "double",
+            "avoid-escape"
+        ]
+    }
 }
