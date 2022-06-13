@@ -11,7 +11,8 @@
         }
     },
     "extends": [
-        "airbnb"
+        "airbnb",
+        "plugin:prettier/recommended"
     ],
     "ignorePatterns": [
         "*.config.js",
@@ -25,11 +26,6 @@
     "rules": {
         "react/destructuring-assignment": "off",
         "react/state-in-constructor": "off",
-        "import/prefer-default-export": "off",
-        "quotes": [
-            2,
-            "double",
-            "avoid-escape"
-        ]
+        "import/prefer-default-export": "off"
     }
 }
