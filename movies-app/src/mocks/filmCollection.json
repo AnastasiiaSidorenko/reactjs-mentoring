@@ -1,0 +1,38 @@
+[
+    {
+        "image": "movie1",
+        "film": "Pulp Fiction",
+        "year": "2004",
+        "category": "Action & Adventure"
+    },
+    {
+        "image": "movie2",
+        "film": "Bohemian Rhapsody",
+        "year": "2003",
+        "category": "Drama, Biography, Music"
+    },
+    {
+        "image": "movie3",
+        "film": "Kill Bill: Vol 2",
+        "year": "1994",
+        "category": "Oscar winning Movie"
+    },
+    {
+        "image": "movie4",
+        "film": "Avengers: War of Infinity",
+        "year": "2004",
+        "category": "Action & Adventure"
+    },
+    {
+        "image": "movie5",
+        "film": "Inception",
+        "year": "2003",
+        "category": "Action & Adventure"
+    },
+    {
+        "image": "movie6",
+        "film": "Reservoir dogs",
+        "year":"1994",
+        "category": "Oscar winning Movie"
+    }
+]
