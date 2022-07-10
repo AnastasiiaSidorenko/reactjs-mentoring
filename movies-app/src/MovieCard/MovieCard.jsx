@@ -7,11 +7,11 @@ export const MovieCard = ({ movie }) => {
   return (
     <div className="movie-card">
       <img className="movie-card__image" src={`assets/movieImages/${image}.png`} alt="movie" />
-      <div>
-        <p>{film}</p>
-        <p>{year}</p>
+      <div className="movie-info">
+        <p className="movie-info__film">{film}</p>
+        <p className="movie-info__year">{year}</p>
       </div>
-      <p>{category}</p>
+      <p className="movie-category">{category}</p>
     </div>
   );
 };

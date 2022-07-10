@@ -1,11 +1,14 @@
 import React from 'react';
 import { HomePage } from './HomePage';
+import { ErrorBoundary } from './ErrorBoundary';
 import './App.scss';
 
 function App() {
   return (
     <div className="App">
-      <HomePage />
+      <ErrorBoundary>
+        <HomePage />
+      </ErrorBoundary>
     </div>
   );
 }
