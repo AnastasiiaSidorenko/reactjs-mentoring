@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -46,6 +47,14 @@ module.exports = {
     ],
   },
   plugins: [
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve('src/core/constants'),
+          to: path.resolve('build/core/constants'),
+        },
+      ],
+    }),
     new HtmlWebpackPlugin({
       title: 'MoviesApp',
       template: './index.html',
