@@ -6,7 +6,11 @@ export const MovieCard = ({ movie }) => {
   const { image, film, year, category } = movie;
   return (
     <div className="movie-card">
-      <img className="movie-card__image" src={`assets/movieImages/${image}.png`} alt="movie" />
+      <img
+        className="movie-card__image"
+        src={`core/constants/movieImages/${image}.png`}
+        alt="movie"
+      />
       <div className="movie-info">
         <p className="movie-info__film">{film}</p>
         <p className="movie-info__year">{year}</p>

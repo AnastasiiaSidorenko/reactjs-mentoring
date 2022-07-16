@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.scss';
-import logo from '../assets/netflix-logo.png';
+import logo from '../core/constants/netflix-logo.png';
+import PlusIcon from '../core/constants/plus-icon.svg';
 
 export const Header = () => {
   return (
@@ -8,7 +9,8 @@ export const Header = () => {
       <div className="logo-container">
         <img className="logo" src={logo} alt="logo" />
         <button className="add-button" type="button">
-          + ADD MOVIE
+          <PlusIcon />
+          ADD MOVIE
         </button>
       </div>
       <div className="search-movie">

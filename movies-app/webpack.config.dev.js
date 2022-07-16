@@ -37,8 +37,13 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(png|svg)$/,
+        test: /\.(png)$/,
         type: 'asset/resource',
+      },
+      {
+        test: /\.svg$/i,
+        issuer: /\.(js)x?$/,
+        use: ['@svgr/webpack'],
       },
     ],
   },
@@ -46,8 +51,8 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve('src/assets'),
-          to: path.resolve('dev/assets'),
+          from: path.resolve('src/core/constants'),
+          to: path.resolve('dev/core/constants'),
         },
       ],
     }),

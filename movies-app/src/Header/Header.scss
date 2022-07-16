@@ -1,5 +1,5 @@
 .header {
-    background-image: url("../assets/header-background.png");
+    background-image: url("../core/constants/header-background.png");
     height: 396px;
     padding: 20px 60px;
 
@@ -13,10 +13,21 @@
         }
 
         .add-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 177px;
             height: 46px;
             background-color: rgba(96, 96, 96, 0.68);
             color: #f65261;
+
+            svg {
+                margin-right: 5px;
+
+                path {
+                    fill: #f65261;
+                }
+            }
         }
     }
 
