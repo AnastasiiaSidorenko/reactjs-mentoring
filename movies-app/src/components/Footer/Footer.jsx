@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../core/constants/netflix-logo.png';
+import logo from '../../core/constants/netflix-logo.png';
 import './Footer.scss';
 
 export const Footer = () => {

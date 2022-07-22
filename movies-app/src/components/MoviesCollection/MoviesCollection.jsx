@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { I18N } from '../core/i18n';
-import { LocaleContext } from '../core/i18n/locale';
-import movieMocks from '../mocks/filmCollection.json';
-import genreMocks from '../mocks/genreTypes.json';
+import { I18N } from '../../core/i18n';
+import { LocaleContext } from '../../core/i18n/locale';
+import movieMocks from '../../mocks/filmCollection.json';
+import genreMocks from '../../mocks/genreTypes.json';
 import { MovieCard } from '../MovieCard';
 import './MoviesCollection.scss';
 
