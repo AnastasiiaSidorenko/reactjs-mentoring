@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+import { I18N } from '../../core/i18n';
+import { LocaleContext } from '../../core/i18n/locale';
 import './MovieModal.scss';
 import { ReactPortal } from '../ReactPortal';
 import CloseIcon from '../../core/constants/close-icon.svg';
 
 export const MovieModal = ({ closeModal, header }) => {
+  const locale = useContext(LocaleContext);
   return (
     <ReactPortal>
-      <div className="add-movie-modal">
+      <div className="movie-modal">
         <div>
           <div className="modal-close">
             <button className="modal-close__button" type="button" onClick={() => closeModal(false)}>
@@ -20,7 +23,7 @@ export const MovieModal = ({ closeModal, header }) => {
               <div className="modal-form__row">
                 <div className="modal-form__input">
                   <label className="modal-form__input__label" htmlFor="title">
-                    TITLE
+                    {I18N[locale].TITLE}
                   </label>
                   <input
                     className="modal-form__input__item modal-form__input__item--big"
@@ -31,7 +34,7 @@ export const MovieModal = ({ closeModal, header }) => {
                 </div>
                 <div className="modal-form__input">
                   <label className="modal-form__input__label" htmlFor="date">
-                    RELEASE DATE
+                    {I18N[locale].RELEASE_DATE}
                   </label>
                   <input
                     className="modal-form__input__item modal-form__input__item--small"
@@ -45,7 +48,7 @@ export const MovieModal = ({ closeModal, header }) => {
               <div className="modal-form__row">
                 <div className="modal-form__input">
                   <label className="modal-form__input__label" htmlFor="movie-url">
-                    MOVIE URL
+                    {I18N[locale].MOVIE_URL}
                   </label>
                   <input
                     className="modal-form__input__item modal-form__input__item--big"
@@ -56,7 +59,7 @@ export const MovieModal = ({ closeModal, header }) => {
                 </div>
                 <div className="modal-form__input">
                   <label className="modal-form__input__label" htmlFor="rating">
-                    RATING
+                    {I18N[locale].RATING}
                   </label>
                   <input
                     className="modal-form__input__item  modal-form__input__item--small"
@@ -69,7 +72,7 @@ export const MovieModal = ({ closeModal, header }) => {
               <div className="modal-form__row">
                 <div className="modal-form__input">
                   <label className="modal-form__input__label" htmlFor="genre">
-                    GENRE
+                    {I18N[locale].GENRE}
                   </label>
                   <select
                     className="modal-form__input__item  modal-form__input__item--big"
@@ -80,7 +83,7 @@ export const MovieModal = ({ closeModal, header }) => {
                 </div>
                 <div className="modal-form__input">
                   <label className="modal-form__input__label" htmlFor="runtime">
-                    RUNTIME
+                    {I18N[locale].RUNTIME}
                   </label>
                   <input
                     className="modal-form__input__item  modal-form__input__item--small"
@@ -93,7 +96,7 @@ export const MovieModal = ({ closeModal, header }) => {
               <div className="modal-form__row">
                 <div className="modal-form__input modal-form__input--textarea">
                   <label className="modal-form__input__label" htmlFor="overview">
-                    OVERVIEW
+                    {I18N[locale].OVERVIEW}
                   </label>
                   <textarea
                     className="modal-form__input__item modal-form__input__description"

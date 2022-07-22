@@ -5,10 +5,12 @@ import { LocaleContext } from '../../core/i18n/locale';
 import CloseIcon from '../../core/constants/close-icon-sm.svg';
 import './MovieCardOptions.scss';
 import { MovieModal } from '../MovieModal';
+import { ConfirmModal } from '../ConfirmModal';
 
 export const MovieCardOptions = ({ closeOptions }) => {
   const locale = useContext(LocaleContext);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isMovieModalOpen, setIsMovieModalOpen] = useState(false);
+  const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
   return (
     <>
       <div className="movie-card-options">
@@ -25,16 +27,29 @@ export const MovieCardOptions = ({ closeOptions }) => {
           <button
             className="movie-card-options__item"
             type="button"
-            onClick={() => setIsModalOpen(true)}
+            onClick={() => setIsMovieModalOpen(true)}
           >
             Edit
           </button>
-          <button className="movie-card-options__item" type="button">
+          <button
+            className="movie-card-options__item"
+            type="button"
+            onClick={() => setIsConfirmModalOpen(true)}
+          >
             Delete
           </button>
         </div>
       </div>
-      {isModalOpen && <MovieModal closeModal={setIsModalOpen} header={I18N[locale].EDIT_MOVIE} />}
+      {isMovieModalOpen && (
+        <MovieModal closeModal={setIsMovieModalOpen} header={I18N[locale].EDIT_MOVIE} />
+      )}
+      {isConfirmModalOpen && (
+        <ConfirmModal
+          closeModal={setIsConfirmModalOpen}
+          header={I18N[locale].DELETE_MOVIE}
+          question={I18N[locale].DELETE_POPUP_QUESTION}
+        />
+      )}
     </>
   );
 };
