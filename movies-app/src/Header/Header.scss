@@ -1,0 +1,55 @@
+.header {
+    background-image: url("../core/constants/header-background.png");
+    height: 396px;
+    padding: 20px 60px;
+
+    .logo-container {
+        display: flex;
+        justify-content: space-between;
+
+        .logo {
+            width: 151px;
+            height: 24px;
+        }
+
+        .add-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 177px;
+            height: 46px;
+            background-color: rgba(96, 96, 96, 0.68);
+            color: #f65261;
+
+            svg {
+                margin-right: 5px;
+
+                path {
+                    fill: #f65261;
+                }
+            }
+        }
+    }
+
+    .search-movie {
+        color: #ffffff;
+
+        .input {
+            width: 713px;
+            background-color: rgba(50, 50, 50, 0.8);
+            margin-right: 14px;
+        }
+
+        .button {
+            width: 233px;
+            background-color: #f65261;
+            color: #ffffff;
+        }
+
+        .input,
+        .button {
+            height: 57px;
+            border-radius: 4px;
+        }
+    }
+}

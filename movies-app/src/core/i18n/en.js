@@ -1,0 +1,7 @@
+export const en = {
+  SORT_BY: 'SORT BY',
+  RELEASE_DATE: 'RELEASE DATE',
+  ADD_MOVIE: 'ADD MOVIE',
+  FIND_YOUR_MOVIE: 'FIND YOUR MOVIE',
+  SEARCH: 'SEARCH',
+};

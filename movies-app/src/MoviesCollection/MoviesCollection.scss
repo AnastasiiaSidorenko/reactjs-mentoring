@@ -1,0 +1,37 @@
+.movies-collection {
+    background-color: #232323;
+    padding: 0 50px;
+    color: #ffffff;
+    border-top: 10px solid #888888;
+}
+
+.movies-filter {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #424242;
+    margin-bottom: 25px;
+
+    &__genre__list {
+        list-style: none;
+        text-transform: uppercase;
+    }
+
+    &__genre__list,
+    &__date {
+        display: flex;
+        column-gap: 30px;
+    }
+
+    &__dropdown {
+        background-color: transparent;
+        color: #ffffff;
+        border: none;
+    }
+}
+
+.movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px 55px;
+}

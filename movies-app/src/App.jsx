@@ -1,12 +1,18 @@
 import React from 'react';
-import './App.css';
-import { Counter } from './Counter';
+import { HomePage } from './HomePage';
+import { ErrorBoundary } from './ErrorBoundary';
+import './App.scss';
+import { LocaleContext } from './core/i18n/locale';
 
 function App() {
   return (
-    <div className="App">
-      <Counter />
-    </div>
+    <LocaleContext.Provider value="en">
+      <div className="App">
+        <ErrorBoundary>
+          <HomePage />
+        </ErrorBoundary>
+      </div>
+    </LocaleContext.Provider>
   );
 }
 
