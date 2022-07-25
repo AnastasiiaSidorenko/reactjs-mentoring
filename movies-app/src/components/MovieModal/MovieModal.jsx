@@ -1,13 +1,26 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 import { I18N } from '../../core/i18n';
 import { LocaleContext } from '../../core/i18n/locale';
 import './MovieModal.scss';
 import { ReactPortal } from '../ReactPortal';
 import CloseIcon from '../../core/constants/close-icon.svg';
+import genreMocks from '../../mocks/genreTypes.json';
 
 export const MovieModal = ({ closeModal, header }) => {
   const locale = useContext(LocaleContext);
+
+  const [isSelectOptionsOpened, setIsSelectOptionsOpened] = useState(false);
+
+  const selectOptions = genreMocks.map((item) => {
+    return (
+      <label>
+        <input type="checkbox" />
+        {item}
+      </label>
+    );
+  });
+
   return (
     <ReactPortal>
       <div className="movie-modal">
@@ -71,15 +84,26 @@ export const MovieModal = ({ closeModal, header }) => {
               </div>
               <div className="modal-form__row">
                 <div className="modal-form__input">
-                  <label className="modal-form__input__label" htmlFor="genre">
-                    {I18N[locale].GENRE}
-                  </label>
-                  <select
-                    className="modal-form__input__item  modal-form__input__item--big"
-                    id="genre"
+                  <div
+                    className="modal-form__input__select-box"
+                    onClick={() => setIsSelectOptionsOpened(!isSelectOptionsOpened)}
+                    role="button"
+                    tabIndex={0}
                   >
-                    <option value="crime">crime</option>
-                  </select>
+                    <label className="modal-form__input__label" htmlFor="genre">
+                      {I18N[locale].GENRE}
+                    </label>
+                    <select
+                      className="modal-form__input__item  modal-form__input__item--big"
+                      id="genre"
+                    >
+                      <option>Select Genre</option>
+                    </select>
+                    <div className="modal-form__input__over-select" />
+                  </div>
+                  {isSelectOptionsOpened && (
+                    <div className="modal-form__input__select-options">{selectOptions}</div>
+                  )}
                 </div>
                 <div className="modal-form__input">
                   <label className="modal-form__input__label" htmlFor="runtime">

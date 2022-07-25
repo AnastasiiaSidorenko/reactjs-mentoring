@@ -8,7 +8,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     height: 100%;
-    overflow: scroll;
+    overflow-y: scroll;
 
     .modal-close {
         display: flex;
@@ -48,6 +48,11 @@
             &__input {
                 display: flex;
                 flex-direction: column;
+                position: relative;
+
+                &__select-box {
+                    position: relative;
+                }
 
                 &__label {
                     font-size: 16px;
@@ -86,6 +91,28 @@
                         color: #ffffff;
                         opacity: 0.3;
                     }
+                }
+
+                &__over-select {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                }
+
+                &__select-options {
+                    display: flex;
+                    flex-direction: column;
+                    width: 525px;
+                    height: 190px;
+                    overflow: auto;
+                    font-size: 20px;
+                    line-height: 24px;
+                    position: absolute;
+                    top: 100%;
+                    z-index: 1;
+                    background-color: rgba(35, 35, 35, 0.92);
                 }
 
                 &__description {
