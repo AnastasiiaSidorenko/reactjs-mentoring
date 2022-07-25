@@ -1,0 +1,43 @@
+.movie-card {
+    &-close {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+        &__button {
+            display: flex;
+            justify-content: flex-end;
+            background-color: transparent;
+            border: unset;
+            padding: 10px 10px 0 0;
+            cursor: pointer;
+        }
+    }
+
+    &-options {
+        display: flex;
+        flex-direction: column;
+        width: 190px;
+        height: 110px;
+        background-color: rgba(35, 35, 35, 0.9181);
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__item {
+            height: 35px;
+            border: unset;
+            padding: 0;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #f65261;
+            }
+        }
+    }
+}

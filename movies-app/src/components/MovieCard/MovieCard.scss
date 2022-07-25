@@ -1,0 +1,52 @@
+.movie-card {
+    width: 322px;
+
+    &-container {
+        position: relative;
+        height: 455px;
+        margin-bottom: 22px;
+
+        &__image {
+            width: 100%;
+            height: auto;
+        }
+
+        &__button {
+            position: absolute;
+            border: unset;
+            background-color: transparent;
+            padding: 0;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+            display: none;
+        }
+
+        &:hover {
+            .movie-card-container__button {
+                display: block;
+            }
+        }
+    }
+}
+
+.movie-info {
+    display: flex;
+    justify-content: space-between;
+
+    &__year {
+        border: 1px solid #979797;
+        border-radius: 4px;
+        padding: 4px 8px;
+    }
+
+    &__film,
+    &__year {
+        margin: 0;
+    }
+}
+
+.movie-info,
+.movie-category {
+    opacity: 0.7;
+}
